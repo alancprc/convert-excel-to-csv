@@ -44,7 +44,7 @@ fun ConvertWorkSheetToCsv (Object $worksheet)
             $sheetData->[$row][$col] = $cell ? $cell->unformatted() : undef;
         }
     }
-    csv( in => $sheetData, out => $worksheet->get_name() . ".csv", eol = $/ );
+    csv( in => $sheetData, out => $worksheet->get_name() . ".csv", eol => $/ );
 }
 
 &main();
